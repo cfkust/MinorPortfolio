@@ -1,8 +1,27 @@
-.header{
-    text-align: center;
-    background-color: darkcyan;
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Cormorant Garamond", serif;
 }
 
-.header h1 h2 h3 {
+/* ~~~~~~~~~~~~ Welcome page ~~~~~~~~~~~~~~~` */
+.header{
+    width: 100%;
+    text-align: center;
+    padding: 100px;
+    position: relative;
+    background: linear-gradient(
+        to bottom,
+        #083344,
+        #0f766e
+    );
+}
+
+.header h1,
+.header h2,
+.header h3 {
     color: white;
+    margin-top: 0;
 }

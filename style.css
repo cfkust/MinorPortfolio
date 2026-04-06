@@ -11,7 +11,7 @@ html, body {
     width: 100%;
     text-align: center;
     padding-top: 100px;
-    padding-bottom: 80px;
+    padding-bottom: 50px;
     position: relative;
     background: linear-gradient(
         to bottom,
@@ -36,6 +36,82 @@ html, body {
 .header h3 {
     font-weight: 400;
     letter-spacing: 0.03em;
+}
+
+/* ~~~~~~~~~~~~ Nav Bar ~~~~~~~~~~~~~~~ */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 16px 0;
+    background-color: #0f766e;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar a,
+.dropbtn {
+    text-decoration: none;
+    color: white;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.navbar a::after,
+.dropbtn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    transition: width 0.25s ease;
+}
+
+.navbar a:hover::after,
+.dropbtn:hover::after {
+    width: 100%;
+}
+
+.navbar a:hover,
+.dropbtn:hover {
+    opacity: 0.85;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 120%;
+    left: 0;
+    background-color: #0f766e;
+    min-width: 160px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    padding: 10px 0;
+    z-index: 1001;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 16px;
+    white-space: nowrap;
+}
+
+.dropdown-content a::after {
+    bottom: 6px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 /* ~~~~~~~~~~~~ Welcome page ~~~~~~~~~~~~~~~ */
@@ -72,15 +148,17 @@ html, body {
 
 .aboutMe p {
     font-size: 1.15rem;
-    margin-bottom: 1.2rem;
 }
 
-/*Projects List*/
+/* Projects List */
 .projects {
-    padding: 40px 60px 70px;
+    padding: 0px 60px 70px;
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 2.5rem 3rem;
 }
 
-.projects h2 {
+.projects h3 {
     text-align: center;
     margin-bottom: 30px;
 }
@@ -117,24 +195,25 @@ html, body {
     line-height: 1.5;
 }
 
-/* ~~~~~~~~~~~~ Project 1: Echoes of ~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~ Project 1: Echoes of Absence ~~~~~~~~~~~~~~~ */
 .portfolio-game {
     max-width: 850px;
-    margin: 3rem auto 5rem auto;
+    margin: 0 auto 5rem auto;
     padding: 2rem;
     text-align: center;
 }
 
-.game-description {
+.description {
     font-size: 1.2rem;
     line-height: 1.8;
     color: #1f2933;
-    margin-bottom: 2rem;
+    text-align: left;
+    margin-left: 1.5rem;
 }
 
 .game-embed {
     width: 100%;
-    max-width: 650px;
+    max-width: 800px;
     margin: 0 auto 1.5rem auto;
 }
 
@@ -144,4 +223,55 @@ html, body {
     border: none;
     border-radius: 6px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ~~~~~~~~~~~~ Project 2: Content Analysis & Creation ~~~~~~~~~~~~~~~ */
+
+.content-proposal {
+    max-width: 850px;
+    margin: 0 auto 5rem auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.content-headers {
+    margin: 2rem 0 1.5rem 0;
+    text-align: center;
+}
+
+.content-headers::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: #0f766e;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* space between images */
+    margin: 2rem 0;
+}
+
+.image-row img {
+    width: 100%;
+    max-width: 400px; /* control size */
+    height: auto;
+
+    border-radius: 12px;
+    border: 2px solid #dbe7e4;
+
+    box-shadow: 0 6px 18px rgba(8, 51, 68, 0.12);
+}
+
+/* ~~~~~~~~~~~~ Project 3: Figma Prototype ~~~~~~~~~~~~~~~ */
+
+.figma {
+    max-width: 850px;
+    margin: 0 auto 5rem auto;
+    padding: 2rem;
+    text-align: center;
 }
